@@ -1,18 +1,14 @@
 # Ichido AI And LLM Bot Blocker
 
-<center>
-
-![art](docs/art.png)
-
-</center>
+<p align="center">
+  <img src="docs/art.png" />
+</p>
 
 The AI/LLM bot blocker web server, firewall, and robots.txt config generator used in production by the [Ichido Search Engine](https://ichi.do/). These configs block known large AI and LLM bots from accessing your site content, while still allowing classical search engines and legitimate users to access content. Supports the following web servers, firewalls, and standards:
 
-<center>
-
-![combined](docs/combined.png)
-
-</center>
+<p align="center">
+  <img src="docs/combined.png" />
+</p>
 
 <center>
 
@@ -46,11 +42,9 @@ wget https://files.ichi.do/minimal-robots-block-ai-bots.conf /var/www/html/<web_
 
 ### Apache
 
-<center>
-
-![apache](docs/apache.png)
-
-</center>
+<p align="center">
+  <img src="docs/apache.png" />
+</p>
 
 For shared hosting, use the `.htaccess` file instructions below.
 
@@ -95,11 +89,9 @@ mv temp.conf .htaccess
 
 ### Nginx
 
-<center>
-
-![nginx](docs/nginx.png)
-
-</center>
+<p align="center">
+  <img src="docs/nginx.png" />
+</p>
 
 1. Download the config file into nginx's `modules-available` directory:
 
@@ -122,11 +114,9 @@ sudo service nginx restart
 
 ### Lighttpd
 
-<center>
-
-![lighttpd](docs/lighttpd.png)
-
-</center>
+<p align="center">
+  <img src="docs/lighttpd.png" />
+</p>
 
 1. Download the config file into lighttpd's `conf-available` directory:
 
@@ -148,11 +138,9 @@ sudo service lighttpd restart
 
 ### Caddy
 
-<center>
-
-![caddy](docs/caddy.png)
-
-</center>
+<p align="center">
+  <img src="docs/caddy.png" />
+</p>
 
 1. Make directories to store caddy config files.
 
@@ -190,11 +178,9 @@ sudo service caddy restart
 
 ### IIS
 
-<center>
-
-![iis](docs/iis.png)
-
-</center>
+<p align="center">
+  <img src="docs/iis.png" />
+</p>
 
 TODO
 
