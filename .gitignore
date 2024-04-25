@@ -1,0 +1,9 @@
+.*
+_*
+*.pyc
+*.egg-info/
+!.gitignore
+!__init__.py
+MANIFEST
+build/
+dist/

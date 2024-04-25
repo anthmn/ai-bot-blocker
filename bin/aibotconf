@@ -1,0 +1,5 @@
+#!/bin/python3
+
+from aibotblocker.aibotconf import main
+
+main()

@@ -1,0 +1,12 @@
+{
+  "comment": "COMMENT",
+  "ips": [
+    "0.0.0.0",
+    "::1"
+  ],
+  "user_agents": [
+    "A",
+    "B",
+    "C"
+  ]
+}
