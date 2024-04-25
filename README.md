@@ -10,8 +10,6 @@ The AI/LLM bot blocker web server, firewall, and robots.txt config generator use
   <img src="docs/combined.png" />
 </p>
 
-<center>
-
 | Server/Firewall | Blocked      |
 | --------------- | ------------ |
 | Iptables        | IP Addresses |
@@ -21,8 +19,6 @@ The AI/LLM bot blocker web server, firewall, and robots.txt config generator use
 | Caddy           | User-Agent   |
 | IIS             | User-Agent   |
 | Robots.txt      | User-Agent   |
-
-</center>
 
 In total there are 6 variants of config files, of which you'll only need 2 with the **minimal** config (1 web server config and 1 robots.txt), or 3 with the **full** config (1 web server config, 1 robots.txt, and 1 firewall config). The minimal config will block most AI bots with a low false positive rate, and the full config that aggressively blocks AI bots and site scrapers, but will likely have many more false positives (due to blocking of all IP addresses from large cloud vendors that most LLMs operate on). It is recommended for most use cases to use the **minimal** config.
 
