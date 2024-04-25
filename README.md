@@ -253,7 +253,7 @@ git commit -m "ADD: new commit."
 git diff HEAD~1 > diff.patch
 ```
 
-6. Send the patch file to <anthony.m.mancini@protonmail.com> through email.
+6. Send the patch file to \<anthony.m.mancini@protonmail.com\> through email.
 
 ## License
 
@@ -261,4 +261,4 @@ git diff HEAD~1 > diff.patch
 
 ## Contact
 
-* Anthony Mancini <anthony.m.mancini@protonmail.com>
+* Anthony Mancini \<anthony.m.mancini@protonmail.com\>
