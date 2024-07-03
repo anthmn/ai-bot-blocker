@@ -4,7 +4,6 @@ conf = {
         "sources": [
             "dark_visitors",
             "aws",
-            "azure",
             "gcp",
         ],
         "categories": {
@@ -33,7 +32,6 @@ conf = {
         "sources": [
             "dark_visitors",
             "aws",
-            "azure",
             "gcp",
         ],
         "categories": {
