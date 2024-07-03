@@ -5,5 +5,6 @@ _*
 !.gitignore
 !__init__.py
 MANIFEST
+tags
 build/
 dist/
