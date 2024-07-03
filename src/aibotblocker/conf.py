@@ -50,11 +50,7 @@ conf = {
             "aws",
             "gcp",
         ],
-        "categories": {
-            "exclude": [
-                "Search Engine Crawler",
-            ]
-        },
+        "categories": {"exclude": []},
         "ips": {
             "include": [],
             "exclude": [],
@@ -65,7 +61,6 @@ conf = {
             ],
             "exclude": [
                 "Google-Extended",
-                "search.marginalia.nu",
             ],
         },
     },
