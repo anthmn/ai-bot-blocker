@@ -12,6 +12,7 @@ conf = {
         ],
         "categories": {
             "exclude": [
+                "Archivers",
                 "Developer Helper",
                 "Fetcher",
                 "Search Engine Crawler",
