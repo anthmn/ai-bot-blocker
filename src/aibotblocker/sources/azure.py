@@ -3,6 +3,7 @@ Azure IP address fetcher.
 """
 
 import json
+import re
 import urllib.request
 from aibotblocker.utils.ipv4 import is_ipv4
 
@@ -36,7 +37,13 @@ def fetch_ips():
     :return: IP addresses.
     :rtype: List[str]
     """
-    url = "https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20240415.json"
+    url = "https://www.microsoft.com/en-us/download/details.aspx?id=56519"
+
+    with urllib.request.urlopen(url) as response:
+        data = response.read().decode()
+
+    url_regex = re.compile("https://download.microsoft.com/.*?.json")
+    url = re.search(url_regex, data).group()
 
     with urllib.request.urlopen(url) as response:
         data = response.read().decode()
