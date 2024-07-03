@@ -1,3 +1,7 @@
+"""
+Prebuilt configs.
+"""
+
 conf = {
     "minimal": {
         "comment": "Ichido AI Bot Blocker.",
@@ -22,7 +26,17 @@ conf = {
                 "ImagesiftBot",
             ],
             "exclude": [
+                "Atom Feed Robot",
+                "AwarioRssBot",
+                "Feedbin",
+                "feedbot",
+                "Feedspot",
+                "FeedValidator",
                 "Google-Extended",
+                "NAVER Blog Rssbot",
+                "page2rss",
+                "rssbot",
+                "RSSingBot",
                 "search.marginalia.nu",
             ],
         },
@@ -48,7 +62,17 @@ conf = {
                 "ImagesiftBot",
             ],
             "exclude": [
+                "Atom Feed Robot",
+                "AwarioRssBot",
+                "Feedbin",
+                "feedbot",
+                "Feedspot",
+                "FeedValidator",
                 "Google-Extended",
+                "NAVER Blog Rssbot",
+                "page2rss",
+                "rssbot",
+                "RSSingBot",
                 "search.marginalia.nu",
             ],
         },
