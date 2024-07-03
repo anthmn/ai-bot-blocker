@@ -28,6 +28,7 @@ conf = {
             "exclude": [
                 "Atom Feed Robot",
                 "AwarioRssBot",
+                "CCBot",
                 "Feedbin",
                 "feedbot",
                 "Feedspot",
