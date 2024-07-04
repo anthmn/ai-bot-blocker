@@ -25,7 +25,7 @@ In total there are 16 variants of config files, of which you'll only need 2 with
 * The **recommended** config will block most AI bots with a low false positive rate, while still allowing archival services and classical search engines access to site content.
 * The **non-recommended** will config aggressively blocks bots and site scrapers (including AI bots, classical search engines, and archival services), but **will likely have many false positives**. It is recommended for nearly all use cases to use the **recommended** config.
 
-The config files can be built manually from source, or prebuilt files can be downloaded from [Ichido's file server](https://files.ichi.do/). Recommended config prebuilt files are prefixed with `recommended-` and non-recommended files with `non-recommende-`. Below are instructions for applying the configurations.
+The config files can be built manually from source, or prebuilt files can be downloaded from [Ichido's file server](https://files.ichi.do/). Recommended config prebuilt files are prefixed with `recommended-` and non-recommended files with `nonrecommended-`. Below are instructions for applying the configurations.
 
 # Usage
 
