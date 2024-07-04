@@ -66,8 +66,8 @@ def main():
         "-c",
         "--config",
         type=str,
-        default="minimal",
-        help="Config used, either (minimal | full). Default is `minimal`.",
+        default="recommended",
+        help="Config used, either (recommended | nonrecommended). Default is `recommended`.",
     )
     parser.add_argument(
         "-m",

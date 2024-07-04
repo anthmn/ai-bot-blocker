@@ -3,7 +3,7 @@ Prebuilt configs.
 """
 
 conf = {
-    "minimal": {
+    "recommended": {
         "comment": "Ichido AI Bot Blocker.",
         "sources": [
             "dark_visitors",
@@ -43,7 +43,7 @@ conf = {
             ],
         },
     },
-    "full": {
+    "nonrecommended": {
         "comment": "Ichido AI Bot Blocker.",
         "sources": [
             "dark_visitors",
