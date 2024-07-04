@@ -20,18 +20,21 @@ The AI/LLM bot blocker web server, firewall, and robots.txt config generator use
 | IIS             | User-Agent   |
 | Robots.txt      | User-Agent   |
 
-In total there are 6 variants of config files, of which you'll only need 2 with the **minimal** config (1 web server config and 1 robots.txt), or 3 with the **full** config (1 web server config, 1 robots.txt, and 1 firewall config). The minimal config will block most AI bots with a low false positive rate, and the full config that aggressively blocks AI bots and site scrapers, but will likely have many more false positives (due to blocking of all IP addresses from large cloud vendors that most LLMs operate on). It is recommended for most use cases to use the **minimal** config.
+In total there are 16 variants of config files, of which you'll only need 2 with the **recommended** config (1 web server config and 1 robots.txt), or 3 with the **non-recommended** config (1 web server config, 1 robots.txt, and 1 firewall config):
 
-The config files can be built manually from source, or prebuilt files can be downloaded from [Ichido's file server](https://files.ichi.do/). Minimal config prebuilt files are prefixed with `minimal-` and full files with `full-`. Below are instructions for applying the configurations.
+* The **recommended** config will block most AI bots with a low false positive rate, while still allowing archival services and classical search engines access to site content.
+* The **non-recommended** will config aggressively blocks bots and site scrapers (including AI bots, classical search engines, and archival services), but **will likely have many false positives**. It is recommended for nearly all use cases to use the **recommended** config.
+
+The config files can be built manually from source, or prebuilt files can be downloaded from [Ichido's file server](https://files.ichi.do/). Recommended config prebuilt files are prefixed with `recommended-` and non-recommended files with `non-recommende-`. Below are instructions for applying the configurations.
 
 # Usage
 
 ## Step 1. Download An AI Bot Blocker Robots.txt.
 
-1. Download the robots.txt file and add it to the root of your web content (should be reachable at `https://\<your\_site\>/robots.txt`).
+1. Download the robots.txt file and add it to the root of your web content (should be reachable at `https://\<your_site\>/robots.txt`).
 
 ```bash
-wget https://files.ichi.do/minimal-robots-block-ai-bots.conf /var/www/html/<web_root>/robots.txt
+wget https://files.ichi.do/recommended-robots-block-ai-bots.conf /var/www/html/<web_root>/robots.txt
 ```
 
 ## Step 2. Download An AI Bot Blocker Web Server Config.
@@ -53,7 +56,7 @@ sudo a2enmod rewrite
 2. Download the config file into apache's `conf-available` directory:
 
 ```bash
-sudo wget https://files.ichi.do/minimal-apache-block-ai-bots.conf -O /etc/apache2/conf-available/block-ai-bots.conf
+sudo wget https://files.ichi.do/recommended-apache-block-ai-bots.conf -O /etc/apache2/conf-available/block-ai-bots.conf
 ```
 
 3. Create a symbolic link to the config in `/etc/apache2/conf-enabled/`
@@ -73,13 +76,13 @@ sudo service apache2 restart
 1. Download the config file.
 
 ```bash
-sudo wget https://files.ichi.do/minimal-htaccess-block-ai-bots.conf
+sudo wget https://files.ichi.do/recommended-htaccess-block-ai-bots.conf
 ```
 
 2. Merge the config with your existing `.htaccess` file, either manually using your hosting provider tools or with this command.
 
 ```bash
-cat .htaccess minimal-htaccess-block-ai-bots.conf > temp.conf
+cat .htaccess recommended-htaccess-block-ai-bots.conf > temp.conf
 mv temp.conf .htaccess
 ```
 
@@ -92,7 +95,7 @@ mv temp.conf .htaccess
 1. Download the config file into nginx's `modules-available` directory:
 
 ```bash
-sudo wget https://files.ichi.do/minimal-nginx-block-ai-bots.conf -O /etc/nginx/modules-available/11-block-ai-bots.conf
+sudo wget https://files.ichi.do/recommended-nginx-block-ai-bots.conf -O /etc/nginx/modules-available/11-block-ai-bots.conf
 ```
 
 2. Include the config in your `server` blocks after the `listen` directives:
@@ -117,7 +120,7 @@ sudo service nginx restart
 1. Download the config file into lighttpd's `conf-available` directory:
 
 ```bash
-sudo wget https://files.ichi.do/minimal-lighttpd-block-ai-bots.conf -O /etc/lighttpd/conf-available/11-block-ai-bots.conf
+sudo wget https://files.ichi.do/recommended-lighttpd-block-ai-bots.conf -O /etc/lighttpd/conf-available/11-block-ai-bots.conf
 ```
 
 2. Create a symbolic link to the config in `/etc/lighttpd/conf-enabled/`
@@ -148,7 +151,7 @@ sudo mkdir -p /etc/caddy/conf-enabled/
 2. Download the config file into `/etc/caddy/conf-available/`:
 
 ```bash
-sudo wget https://files.ichi.do/minimal-caddy-block-ai-bots.conf -O /etc/caddy/conf-available/11-block-ai-bots.conf
+sudo wget https://files.ichi.do/recommended-caddy-block-ai-bots.conf -O /etc/caddy/conf-available/11-block-ai-bots.conf
 ```
 
 3. Create a symbolic link to the config in `/etc/caddy/conf-enabled/`
@@ -193,7 +196,7 @@ sudo apt-get install -y iptables-persistent
 2. Download the config file into `/etc/iptables/rules.v4`:
 
 ```bash
-sudo wget https://files.ichi.do/full-iptables-block-ai-bots.conf -O /etc/iptables/rules.v4
+sudo wget https://files.ichi.do/non-recommended-iptables-block-ai-bots.conf -O /etc/iptables/rules.v4
 ```
 
 3. Restart iptables.
@@ -235,7 +238,7 @@ git commit -m "ADD: new commit."
 git diff HEAD~1 > diff.patch
 ```
 
-6. Send the patch file to \<anthony.m.mancini@protonmail.com\> through email.
+6. Send the patch file to \<<anthony.m.mancini@protonmail.com>\> through email.
 
 ## License
 
@@ -243,4 +246,4 @@ git diff HEAD~1 > diff.patch
 
 ## Contact
 
-* Anthony Mancini \<anthony.m.mancini@protonmail.com\>
+* Anthony Mancini \<<anthony.m.mancini@protonmail.com>\>
